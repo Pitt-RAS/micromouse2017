@@ -12,7 +12,7 @@ int button3 = 23;
 
 void setup() {
   // put your setup code here, to run once:
-  Serial.begin(BAUD);
+  Serial.begin(9600);
   pinMode(Ain1, OUTPUT);
   pinMode(Ain2, OUTPUT);
   pinMode(PWMA, OUTPUT);
@@ -49,6 +49,9 @@ void loop() {
   delay(1000);
   move(0);
   delay(1000);
+  Serial.println("b1 " + b1);
+  Serial.println("b2 " + b2);
+  Serial.println("b3 " + b3);
 }
 
 void move(int velocity) {
